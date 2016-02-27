@@ -5,16 +5,31 @@
 
     <bean id="person"
           class="com.chasewoodford.java.spring.Person"
-          init-method="onCreate">
-        <constructor-arg name="id" value="777"></constructor-arg>
-        <constructor-arg name="name" value="Mary"></constructor-arg>
-        <property name="taxId" value="321"></property>
+          init-method="onCreate"
+          factory-method="getInstance">
+        <constructor-arg name="id" value="1001"></constructor-arg>
+        <constructor-arg name="name" value="Chase"></constructor-arg>
+        <property name="address" ref="address"></property>
+    </bean>
+
+    <bean id="person2"
+          class="com.chasewoodford.java.spring.Person"
+          init-method="onCreate"
+          factory-bean="personfactory"
+          factory-method="createPerson">
+        <constructor-arg name="id" value="1002"></constructor-arg>
+        <constructor-arg name="name" value="Mike"></constructor-arg>
         <property name="address" ref="address"></property>
     </bean>
 
     <bean id="address"
           class="com.chasewoodford.java.spring.Address">
-        <constructor-arg name="street" value="2212 Highland Court"></constructor-arg>
+        <constructor-arg name="street" value="1 Beach Ln"></constructor-arg>
         <constructor-arg name="postcode" value="17110"></constructor-arg>
     </bean>
+
+    <bean id="personfactory"
+          class="com.chasewoodford.java.spring.PersonFactory">
+    </bean>
+
 </beans>

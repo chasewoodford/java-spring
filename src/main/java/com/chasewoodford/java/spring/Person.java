@@ -1,5 +1,7 @@
 package com.chasewoodford.java.spring;
 
+import sun.nio.ch.sctp.PeerAddrChange;
+
 public class Person {
 
     private int id;
@@ -7,21 +9,18 @@ public class Person {
     private int taxId;
     private Address address;
 
-    public Person() {
-
-    }
-
     public Person(int id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public void  onCreate() {
-        System.out.println("Person created: " + this);
+    public static Person getInstance(int id, String name) {
+        System.out.println("Creating person like a boss.");
+        return new Person(id, name);
     }
 
-    public void speak() {
-        System.out.println("Hello! I'm a person.");
+    public void  onCreate() {
+        System.out.println("Person created: " + this);
     }
 
     public void setAddress(Address address) {
