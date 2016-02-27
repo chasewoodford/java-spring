@@ -11,9 +11,9 @@ public class App {
 
         Person person = (Person)context.getBean("person");
 
-        person.setTaxId(1263070);
+        FruitBasket fruitBasket = (FruitBasket)context.getBean("basket");
 
-        System.out.println(person);
+        System.out.println("\n" + fruitBasket);
     }
 
 }
