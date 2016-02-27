@@ -15,9 +15,12 @@ public class App {
 
         Pets pets = (Pets)context.getBean("pets");
 
+        Jungle jungle = (Jungle)context.getBean("jungle");
+
         System.out.println("\n" + person);
         System.out.println("\n" + fruitBasket);
         System.out.println("\n" + pets);
+        System.out.println("\n" + jungle);
     }
 
 }

@@ -68,4 +68,20 @@
         <property name="type" value="Hamster"></property>
     </bean>
 
+    <bean id="jungle" class="com.chasewoodford.java.spring.Jungle">
+        <property name="foods">
+            <props>
+                <prop key="gorilla">Banana</prop>
+                <prop key="panda">Bamboo</prop>
+                <prop key="snake">Eggs</prop>
+            </props>
+        </property>
+        <property name="pets">
+            <map>
+                <entry key="cat" value-ref="cat"></entry>
+                <entry key="hamster" value-ref="hamster"></entry>
+            </map>
+        </property>
+    </bean>
+
 </beans>
