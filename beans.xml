@@ -44,7 +44,12 @@
     </bean>
 
     <bean id="pets" class="com.chasewoodford.java.spring.Pets">
-        <property name="largest" ref="dog"></property>
+        <property name="largest">
+            <bean id="dog" class="com.chasewoodford.java.spring.Pet">
+                <property name="name" value="Darby"></property>
+                <property name="type" value="Dog"></property>
+            </bean>
+        </property>
         <property name="pets">
             <list>
                 <ref bean="cat"/>
@@ -56,11 +61,6 @@
     <bean id="cat" class="com.chasewoodford.java.spring.Pet">
         <property name="name" value="Smike"></property>
         <property name="type" value="Cat"></property>
-    </bean>
-
-    <bean id="dog" class="com.chasewoodford.java.spring.Pet">
-        <property name="name" value="Darby"></property>
-        <property name="type" value="Dog"></property>
     </bean>
 
     <bean id="hamster" class="com.chasewoodford.java.spring.Pet">
