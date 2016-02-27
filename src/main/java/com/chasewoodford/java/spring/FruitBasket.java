@@ -3,6 +3,7 @@ package com.chasewoodford.java.spring;
 import java.util.List;
 
 public class FruitBasket {
+
     private String name;
     private List<String> fruits;
 

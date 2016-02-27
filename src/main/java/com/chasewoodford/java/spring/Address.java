@@ -1,6 +1,7 @@
 package com.chasewoodford.java.spring;
 
 public class Address {
+
     private String street;
     private String postcode;
 

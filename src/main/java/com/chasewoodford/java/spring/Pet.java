@@ -1,6 +1,7 @@
 package com.chasewoodford.java.spring;
 
 public class Pet {
+
     private String name;
     private String type;
 

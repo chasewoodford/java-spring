@@ -3,6 +3,7 @@ package com.chasewoodford.java.spring;
 import java.util.List;
 
 public class Pets {
+
     private Pet largest;
     private List<Pet> pets;
 

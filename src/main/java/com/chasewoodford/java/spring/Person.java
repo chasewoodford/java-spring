@@ -1,7 +1,5 @@
 package com.chasewoodford.java.spring;
 
-import sun.nio.ch.sctp.PeerAddrChange;
-
 public class Person {
 
     private int id;
