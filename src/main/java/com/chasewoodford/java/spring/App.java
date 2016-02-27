@@ -13,7 +13,11 @@ public class App {
 
         FruitBasket fruitBasket = (FruitBasket)context.getBean("basket");
 
+        Pets pets = (Pets)context.getBean("pets");
+
+        System.out.println("\n" + person);
         System.out.println("\n" + fruitBasket);
+        System.out.println("\n" + pets);
     }
 
 }
