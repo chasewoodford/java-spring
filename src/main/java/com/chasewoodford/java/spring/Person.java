@@ -4,8 +4,8 @@ public class Person {
 
     private int id;
     private String name;
-
     private int taxId;
+    private Address address;
 
     public Person() {
 
@@ -20,6 +20,10 @@ public class Person {
         System.out.println("Hello! I'm a person.");
     }
 
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
     public void setTaxId(int taxId) {
         this.taxId = taxId;
     }
@@ -30,6 +34,7 @@ public class Person {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", taxId=" + taxId +
+                ", address=" + address +
                 '}';
     }
 }

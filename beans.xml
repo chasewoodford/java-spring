@@ -5,8 +5,15 @@
 
     <bean id="person"
           class="com.chasewoodford.java.spring.Person">
-        <constructor-arg value="777"></constructor-arg>
-        <constructor-arg value="Mary"></constructor-arg>
+        <constructor-arg name="id" value="777"></constructor-arg>
+        <constructor-arg name="name" value="Mary"></constructor-arg>
         <property name="taxId" value="321"></property>
+        <property name="address" ref="address"></property>
+    </bean>
+
+    <bean id="address"
+          class="com.chasewoodford.java.spring.Address">
+        <constructor-arg name="street" value="Highland Court"></constructor-arg>
+        <constructor-arg name="postcode" value="17110"></constructor-arg>
     </bean>
 </beans>
