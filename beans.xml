@@ -45,7 +45,7 @@
 
     <bean id="pets" class="com.chasewoodford.java.spring.Pets">
         <property name="largest">
-            <bean id="dog" class="com.chasewoodford.java.spring.Pet">
+            <bean class="com.chasewoodford.java.spring.Pet">
                 <property name="name" value="Darby"></property>
                 <property name="type" value="Dog"></property>
             </bean>
