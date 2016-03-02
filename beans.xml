@@ -88,11 +88,8 @@
 
     <context:annotation-config/>
     <context:component-scan base-package="com.chasewoodford"></context:component-scan>
-
     <!--<bean id="logger" class="com.chasewoodford.java.spring.Logger"></bean>-->
-
     <!--<bean id="consoleWriter" class="com.chasewoodford.java.spring.ConsoleWriter"></bean>-->
-
     <!--<bean name="fileWriter" class="com.chasewoodford.java.spring.FileWriter"></bean>-->
 
 </beans>

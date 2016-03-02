@@ -28,6 +28,10 @@ public class App {
 
         logger.writeConsole("Hello world!");
         logger.writeFile("Hi again");
+
+        Robot robot = (Robot)context.getBean("robot");
+        robot.speak();
+
     }
 
 }
