@@ -3,9 +3,11 @@ package com.chasewoodford.java.spring;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
+import java.io.IOException;
+
 public class App {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         ApplicationContext context = new FileSystemXmlApplicationContext("beans.xml");
 
@@ -21,6 +23,11 @@ public class App {
         System.out.println("\n" + fruitBasket);
         System.out.println("\n" + pets);
         System.out.println("\n" + jungle);
+
+        Logger logger = (Logger)context.getBean("logger");
+
+        logger.writeConsole("Hello world!");
+        logger.writeFile("Hi again");
     }
 
 }
